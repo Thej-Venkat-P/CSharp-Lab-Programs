@@ -14,16 +14,11 @@ class Lab5
         cols = rows * 2 - 1;
         int[,] arr = new int[rows, cols];
 
-        arr[0, rows - 1] = 1;
-        for (int i = 1; i < rows; i++)
-        {
-            for (int j = 1; j < cols - 1; j++)
-            {
-                arr[i, j] = arr[i - 1, j - 1] + arr[i - 1, j + 1];
-            }
-        }
-        arr[rows - 1, 0] = arr[rows - 1, cols - 1] = 1;
-
+        Pascal(arr, rows, cols);
+        printPascal(arr, rows, cols);
+    }
+    static void printPascal(int[,] arr, int rows, int cols)
+    {
         Console.WriteLine("Pascal Triangle:");
         for (int i = 0; i < rows; i++)
         {
@@ -34,5 +29,18 @@ class Lab5
                     Console.Write("  ");
             Console.WriteLine();
         }
+    }
+
+    static void Pascal(int[,] arr, int rows, int cols)
+    {
+        arr[0, rows - 1] = 1;
+        for (int i = 1; i < rows; i++)
+        {
+            for (int j = 1; j < cols - 1; j++)
+            {
+                arr[i, j] = arr[i - 1, j - 1] + arr[i - 1, j + 1];
+            }
+        }
+        arr[rows - 1, 0] = arr[rows - 1, cols - 1] = 1;
     }
 }
