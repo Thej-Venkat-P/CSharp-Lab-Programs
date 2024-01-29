@@ -6,13 +6,13 @@ class Lab4
 {
     static void Main()
     {
-        int num1, num2, result; bool flag = false;
+        int num1, num2; double result; bool flag = false;
         try
         {
             Console.WriteLine("Enter two numbers to Divide:");
             num1 = Convert.ToInt32(Console.ReadLine());
             num2 = Convert.ToInt32(Console.ReadLine());
-            result = num1 / num2;
+            result = (num1) / (num2);
             Console.WriteLine("Result of division is: {0} ", result);
 
             Console.WriteLine("\nEnter the Length of Array:");
@@ -39,7 +39,7 @@ class Lab4
         }
         finally
         {
-            Console.WriteLine("\nError Occured : " + flag);
+            Console.WriteLine($"\nError Occured : {flag}");
         }
     }
 }

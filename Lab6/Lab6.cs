@@ -29,9 +29,10 @@ class Lab6
 
     static void Floyd(int[][] arr, int rows)
     {
-        int num = 1;
+
         for (int i = 0; i < rows; i++)
         {
+            int num = 1;
             arr[i] = new int[i + 1];
             for (int j = 0; j <= i; j++)
             {

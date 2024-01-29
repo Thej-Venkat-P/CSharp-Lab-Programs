@@ -12,11 +12,11 @@ class Lab3
         Console.WriteLine("Enter a string:");
         str = Console.ReadLine();
         Console.WriteLine("All substrings in a given string are:");
-        for (int i = 0; i < str.Length; i++)
+        for (int i = 1; i <= str.Length; i++)
         {
-            for (int j = 1; j <= str.Length - i; j++)
+            for (int j = 0; j <= str.Length - i; j++)
             {
-                Console.WriteLine(str.Substring(i, j));
+                Console.WriteLine(str.Substring(j, i));
             }
         }
         Console.WriteLine("All substrings in a given string are printed.");
