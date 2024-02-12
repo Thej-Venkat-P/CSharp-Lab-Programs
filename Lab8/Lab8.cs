@@ -15,18 +15,18 @@ class StackProgram
 
         stack.Push(10);   // Push elements onto the stack 
         stack.Push(20);
+        stack.Size = 3;
         stack.Push(30);
-        Console.WriteLine("Stack elements:");    // Display the stack 
         stack.Display();
+        stack.Push(40);
+
         int poppedElement = stack.Pop();
         Console.WriteLine($"Popped element: {poppedElement}");
         poppedElement = stack.Pop();
         Console.WriteLine($"Popped element: {poppedElement}");
         stack.Pop();
-        Console.WriteLine("Stack elements after popping:");
         stack.Display();
-        stack.Push(40);
-        stack.Display();
+        stack.Pop();
 
     }
 }
@@ -92,6 +92,23 @@ public class Stack
                 Console.Write($"{array[i]} ");
             }
             Console.WriteLine();
+        }
+    }
+     public int Size{
+        get { return MaxSize; }
+        set { 
+            if(value > 0 && value > MaxSize){
+                MaxSize = value;
+                Console.WriteLine("Size has been resized to " + value);
+                int[] tempArray = new int[value];
+                for(int i = 0; i < array.Length; i++){
+                    tempArray[i] = array[i];
+                }
+                this.array = tempArray;
+            }
+            else{
+                Console.WriteLine("Size cannot be less than the current size.");
+            }
         }
     }
 }
