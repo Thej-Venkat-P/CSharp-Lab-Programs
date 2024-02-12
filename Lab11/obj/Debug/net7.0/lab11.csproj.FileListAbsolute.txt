@@ -1,0 +1,14 @@
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\bin\Debug\net7.0\lab11.exe
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\bin\Debug\net7.0\lab11.deps.json
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\bin\Debug\net7.0\lab11.runtimeconfig.json
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\bin\Debug\net7.0\lab11.dll
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\bin\Debug\net7.0\lab11.pdb
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.AssemblyInfoInputs.cache
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.AssemblyInfo.cs
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.csproj.CoreCompileInputs.cache
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.dll
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\refint\lab11.dll
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.pdb
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\lab11.genruntimeconfig.cache
+C:\Users\Thej Venkat\OneDrive\cse\sem5\c#\LabPrograms\Lab11\obj\Debug\net7.0\ref\lab11.dll
