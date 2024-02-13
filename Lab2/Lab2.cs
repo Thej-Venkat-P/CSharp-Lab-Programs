@@ -18,7 +18,7 @@ class Lab2
 {
     static void Main()
     {
-        int num, sum, temp;
+        int num, sum, digit;
         Console.WriteLine("Armstrong numbers between 1 to 1000 are:");
         for (int i = 1; i <= 1000; i++)
         {
@@ -26,8 +26,8 @@ class Lab2
             sum = 0;
             while (num > 0)
             {
-                temp = num % 10;
-                sum = sum + (temp * temp * temp);
+                digit = num % 10;
+                sum += Convert.ToInt32(Math.Pow(digit, order(i)));
                 num = num / 10;
             }
             if (sum == i)
@@ -35,5 +35,13 @@ class Lab2
                 Console.Write(i + " ");
             }
         }
+    }
+    static int order(int n){
+        int count = 0;
+        while(n != 0){
+            count++;
+            n = n / 10;
+        }
+        return count;
     }
 }
