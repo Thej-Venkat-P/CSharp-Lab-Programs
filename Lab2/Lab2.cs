@@ -10,31 +10,30 @@
 // if we need to check if 21 is ar not?
 // 21 = 2*2 + 1*1
 // Armstrong numbers between 1 to 9 are: 1, 2, 3, 4, 5, 6, 7, 8, 9
-// Armstrong numbers between 1 to 100 are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407
+// Armstrong numbers between 1 to 1000 are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407
 
 using System;
 
-class ArmstrongNumber
+class Lab2
 {
     static void Main()
     {
-        int num, rem, sum, temp;
-        Console.WriteLine("Armstrong Number between 1 to 1000 are:");
-        for (num = 1; num <= 1000; num++)
+        int num, sum, temp;
+        Console.WriteLine("Armstrong numbers between 1 to 1000 are:");
+        for (int i = 1; i <= 1000; i++)
         {
-            temp = num;
+            num = i;
             sum = 0;
-            while (temp != 0)
+            while (num > 0)
             {
-                rem = temp % 10;
-                sum = sum + (rem * rem * rem);
-                temp = temp / 10;
+                temp = num % 10;
+                sum = sum + (temp * temp * temp);
+                num = num / 10;
             }
-            if (num == sum)
+            if (sum == i)
             {
-                Console.WriteLine(num);
+                Console.Write(i + " ");
             }
         }
-        Console.WriteLine("All Armstrong Number between 1 to 1000 are printed.");
     }
 }
