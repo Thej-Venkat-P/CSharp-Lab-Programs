@@ -20,6 +20,7 @@ class Lab1
         op = Convert.ToChar(Console.ReadLine());
 
         bool divideByZero = (op == '/' || op == '%') && num2 == 0;
+        bool notValidOperator = op != '+' && op != '-' && op != '*' && op != '/' && op != '%';
 
         switch (op)
         {
@@ -54,9 +55,55 @@ class Lab1
         }
 
         Console.WriteLine();
-        if (!divideByZero)
+        if (!divideByZero && !notValidOperator)
         {
             Console.WriteLine("Result: {0} {1} {2} = {3}", num1, op, num2, result);
         }
     }
 }
+
+// Output:
+
+/*
+Enter the first number:
+10 
+Enter the second number:
+2
+Enter the operator:
++
+
+Result: 10 + 2 = 12
+*/
+
+/*
+Enter the first number:
+5
+Enter the second number:
+0
+Enter the operator:
+/
+Cannot divide by zero
+
+*/
+
+/*
+Enter the first number:
+10
+Enter the second number:
+0
+Enter the operator:
+%
+Cannot divide by zero
+
+*/
+
+/*
+Enter the first number:
+10
+Enter the second number:
+5
+Enter the operator:
+^
+Invalid operator
+
+*/

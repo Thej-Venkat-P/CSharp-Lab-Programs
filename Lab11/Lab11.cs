@@ -68,3 +68,12 @@ public class Lab11
         Console.WriteLine("Triangle Perimeter: " + triangle.CalculatePerimeter());
     }
 }
+
+// Output:
+
+/*
+Circle Area: 78.53981633974483
+Circle Perimeter: 31.41592653589793
+Triangle Area: 6
+Triangle Perimeter: 12
+*/

@@ -22,3 +22,40 @@ class Lab3
         Console.WriteLine("All substrings in a given string are printed.");
     }
 }
+
+// Output:
+
+/*
+Enter a string:
+Hello
+All substrings in a given string are:
+H
+e
+l
+l
+o
+He
+el
+ll
+lo
+Hel
+ell
+llo
+Hell
+ello
+Hello
+All substrings in a given string are printed.
+*/
+
+/*
+Enter a string:
+Hey
+All substrings in a given string are:
+H
+e
+y
+He
+ey
+Hey
+All substrings in a given string are printed.
+*/

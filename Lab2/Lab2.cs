@@ -24,11 +24,12 @@ class Lab2
         {
             num = i;
             sum = 0;
+            int power = Order(i);
             while (num > 0)
             {
                 digit = num % 10;
-                sum += Convert.ToInt32(Math.Pow(digit, order(i)));
-                num = num / 10;
+                sum += Convert.ToInt32(Math.Pow(digit, power));
+                num /= 10;
             }
             if (sum == i)
             {
@@ -36,12 +37,19 @@ class Lab2
             }
         }
     }
-    static int order(int n){
+    static int Order(int n){
         int count = 0;
         while(n != 0){
             count++;
-            n = n / 10;
+            n /= 10;
         }
         return count;
     }
 }
+
+// Output:
+
+/*
+Armstrong numbers between 1 to 1000 are:
+1 2 3 4 5 6 7 8 9 153 370 371 407
+*/

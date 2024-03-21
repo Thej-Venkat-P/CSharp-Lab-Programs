@@ -48,3 +48,13 @@ class Lab9
         sum.Display();
     }
 }
+
+// Output:
+
+/*
+Enter the real part of the first complex number: 1
+Enter the imaginary part of the first complex number: 12
+Enter the real part of the second complex number: 10
+Enter the imaginary part of the second complex number: 2
+Sum of the complex numbers: 11 + 14i
+*/

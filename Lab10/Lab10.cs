@@ -76,3 +76,16 @@ class Lab10
         } 
     } 
 } 
+
+// Output:
+/*
+Drawing Circle
+Erasing Circle  
+
+Drawing Triangle
+Erasing Triangle
+
+Drawing Square  
+Erasing Square  
+
+*/

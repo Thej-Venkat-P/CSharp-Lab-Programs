@@ -6,41 +6,61 @@ using System;
 
 class Lab5
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        int rows, cols;
-        Console.WriteLine("Enter number of rows:");
-        rows = Convert.ToInt32(Console.ReadLine());
-        cols = rows * 2 - 1;
-        int[,] arr = new int[rows, cols];
+        Console.WriteLine("Enter the number of rows for Pascal's triangle:");
+        int rows = Convert.ToInt32(Console.ReadLine());
 
-        Pascal(arr, rows, cols);
-        printPascal(arr, rows, cols);
-    }
-    static void printPascal(int[,] arr, int rows, int cols)
-    {
-        Console.WriteLine("Pascal Triangle:");
+        int[,] triangle = new int[rows,rows];
+
         for (int i = 0; i < rows; i++)
         {
-            for (int j = 0; j < cols; j++)
-                if (arr[i, j] != 0)
-                    Console.Write(arr[i, j] + " ");
-                else
-                    Console.Write("  ");
+            triangle[i,0] = 1;
+            for (int j = 1; j <= i; j++)
+            {
+                triangle[i,j] = triangle[i - 1,j - 1] + triangle[i - 1,j];
+            }
+        }
+
+        // Print Pascal's triangle in a triangle shape
+        for (int i = 0; i < rows; i++)
+        {
+            // Print spaces to align the triangle
+            for (int k = 0; k < rows - i - 1; k++)
+            {
+                Console.Write(" ");
+            }
+
+            // Print the values of the current row
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write(triangle[i,j] + " ");
+            }
+
             Console.WriteLine();
         }
     }
-
-    static void Pascal(int[,] arr, int rows, int cols)
-    {
-        arr[0, rows - 1] = 1;
-        for (int i = 1; i < rows; i++)
-        {
-            for (int j = 1; j < cols - 1; j++)
-            {
-                arr[i, j] = arr[i - 1, j - 1] + arr[i - 1, j + 1];
-            }
-        }
-        arr[rows - 1, 0] = arr[rows - 1, cols - 1] = 1;
-    }
 }
+
+// Output:
+
+/*
+Enter the number of rows for Pascal's triangle:
+5
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+*/
+
+/*
+Enter the number of rows for Pascal's triangle:
+6
+     1        
+    1 1       
+   1 2 1      
+  1 3 3 1     
+ 1 4 6 4 1    
+1 5 10 10 5 1 
+*/

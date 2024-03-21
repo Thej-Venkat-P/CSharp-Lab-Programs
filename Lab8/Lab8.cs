@@ -112,3 +112,18 @@ public class Stack
         }
     }
 }
+
+// Output:
+/*
+Enter the size of the stack: 2
+Pushed element: 10
+Pushed element: 20
+Size has been resized to 3
+Pushed element: 30
+10 20 30 
+Stack overflow! Cannot push 40
+Popped element: 30
+Popped element: 20
+Stack is empty.
+Stack underflow! Cannot pop from an empty stack.
+*/

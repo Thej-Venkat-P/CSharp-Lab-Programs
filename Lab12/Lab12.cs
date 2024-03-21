@@ -65,3 +65,16 @@ public class Lab12
         r.Display();
     }
 }
+
+// Output:
+
+/*
+Initial dimensions:
+Width: 10
+Height: 20
+Width has been resized to 15 
+Height has been resized to 25
+Updated dimensions:
+Width: 15
+Height: 25
+*/

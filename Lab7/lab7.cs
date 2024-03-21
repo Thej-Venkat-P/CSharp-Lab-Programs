@@ -7,32 +7,26 @@ class Lab7
 {
     static void Main()
     {
-        Console.Write("Enter the path of the source text file: ");
-        string sourceFilePath = Console.ReadLine();
-
-        Console.Write("Enter the path of the destination text file: ");
-        string destinationFilePath = Console.ReadLine();
-
-        // Read and copy the file contents 
-        CopyFileContents(sourceFilePath, destinationFilePath);
-
-        Console.WriteLine("File contents copied successfully!");
-
-        /* Display the content */
-        string fileContent = File.ReadAllText(destinationFilePath);
-        Console.WriteLine("File Content:");
-        Console.WriteLine(fileContent);
-    }
-
-    static void CopyFileContents(string sourceFilePath, string destinationFilePath)
-    {
         try
         {
+            Console.Write("Enter the path of the source text file: ");
+            string sourceFilePath = Console.ReadLine();
+
+            Console.Write("Enter the path of the destination text file: ");
+            string destinationFilePath = Console.ReadLine();
+
             // Read the contents of the source file 
             string fileContents = File.ReadAllText(sourceFilePath);
 
             // Write the contents to the destination file 
             File.WriteAllText(destinationFilePath, fileContents);
+
+            Console.WriteLine("File contents copied successfully!");
+
+            /* Display the content */
+            string fileContent = File.ReadAllText(destinationFilePath);
+            Console.WriteLine("File Content at Destination:");
+            Console.WriteLine(fileContent);
         }
         catch (Exception ex)
         {
@@ -40,3 +34,25 @@ class Lab7
         }
     }
 }
+
+// Output:
+
+/*
+Enter the path of the source text file: a.txt
+Enter the path of the destination text file: b.txt
+File contents copied successfully!
+File Content at Destination:
+This is a.txt file.
+Hello This is Example Text.
+
+*/
+
+/*
+Enter the path of the source text file: a.txt
+Enter the path of the destination text file: c.txt
+File contents copied successfully!
+File Content at Destination:      
+This is a.txt file.
+Hello This is Example Text.
+Transfer this text to c.txt file.
+*/
